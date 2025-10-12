@@ -8,5 +8,5 @@ if [ $annee -ge "2016" ] && [ $annee -le "2018" ] && [ -n $entite ]
 then
     cat ../../../Exercices/Exercice1/ann/$1/* | grep $2 | wc -l
 else
-    exit
+    echo "Arguments incorrects"
 fi

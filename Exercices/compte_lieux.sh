@@ -6,17 +6,17 @@ nombre_lignes=$3
 
 if [[ "$annee" == "*" || ( "$annee" -ge 2016 && "$annee" -le 2018 ) ]]
 then
-
     if  [[ "$mois" == "*" || ( "$mois" -ge 1 && "$mois" -le 12 ) ]]
     then
-
         if [ $nombre_lignes -gt "0" ]
         then
-
               cat ../../../Exercices/Exercice1/ann/$1/*_$2_* | grep Location | cut -f 3  | sort |  uniq -c | sort -n | tail -n $3
-
+        else
+            echo "Arguments incorrects"
         fi
+    else
+        echo "Arguments incorrects"
     fi
 else
-    exit
+        echo "Arguments incorrects"
 fi
