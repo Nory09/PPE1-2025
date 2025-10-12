@@ -1,8 +1,26 @@
 #!/usr/bin/bash
-cat ../../../Exercices/Exercice1/ann/2016/* | grep $1 | wc -l
-cat ../../../Exercices/Exercice1/ann/2017/* | grep $1 | wc -l
-cat ../../../Exercices/Exercice1/ann/2018/* | grep $1 | wc -l
+#Les chemins dans les commandes correspondent à mon arborescence
+entite=$1
 
+
+if [ -n $1 ]
+then
+    cat ../../../Exercices/Exercice1/ann/2016/* | grep $1 | wc -l
+else
+    exit
+fi
+if [ -n $1 ]
+then
+    cat ../../../Exercices/Exercice1/ann/2017/* | grep $1 | wc -l
+else
+    exit
+fi
+if [ -n $1 ]
+then
+    cat ../../../Exercices/Exercice1/ann/2018/* | grep $1 | wc -l
+else
+    exit
+fi
 
 
 
