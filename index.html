@@ -1,0 +1,74 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <title>Programmation et Projet Encadré</title>
+</head>
+
+<body>
+<div class="content is-large has-background-primary-soft">
+    <h1 class="title has-text-centered"> Projet de Programmmation Encadré : Mini-Projet</h1>
+</div>
+<img src="./images/code-1076536_1920.jpg"/>
+<div class="columns">
+    <div class="column">
+        <h3 class="block title is-3 has-text-centered has-background-primary-soft">Présentation</h3>
+        <p class="has-text-justified">Ce projet s'inclut dans le cadre de l'UE "L7TI005 - Projet de Programmation Encadré", faisant partie du cursus du Master PluriTAL. Il consiste en une préparation pour le travail de groupe qui conclut le semestre.</p>
+        <p class="has-text-justified">Pour réaliser ce projet, nous avons eu recours à une liste d'URLs fournie par les enseignants. Afin de faciliter la récupération des données </p>
+        <p class="has-text-justified">Tout au long de ce projet, nous avons pu acquérir les compétences nécéssaires à l'extraction de données et avons mis à profit les outils à notre disposition pour obtenir un résultat satisfaisant.</p>
+    </div>
+    <div class="column">
+        <h3 class=" block title is-3 has-text-centered has-background-primary-soft">Processus</h3>
+        <p class="has-text-justified">L'élaboration du Mini-Projet s'est déroulée du 22/10/25 au 17/11/25, s'étalant sur trois semaines. en excluant la semaine de la Toussaint. Le processus a suivi les étapes suivantes :</p>
+        <ol class="is-upper-roman has-text-justified">
+            <li>Écriture d'un script bash qui récupère certaines informations (le code HTTP, le type d'encodage et le nombre de mots) à partir d'une liste d'URLs données.</li>
+            <li>Inscription des données récoltées lors de l'étape I. dans un fichier tabulaire de type .tsv, où les données sont séparées par des tabulations.</li>
+            <li>Réadaptation du script afin que la sortie soit sous format .html</li>
+            <li>Personnalisation de la sortie .html en utilisant la bibliothèque CSS "Bulma"</li>
+            <li>Création d'une page GitHub résumant le Mini-Projet</li>
+        </ol>
+    </div>
+    <div class="column">
+        <h3 class="block title is-3 has-text-centered has-background-primary-soft">Méthodologie</h3>
+        <p class="has-text-justified">Pour récolter les données sur les différents sites, nous avons utilisé, au sein de notre script bash, les commandes suivantes : </p>
+        <ul class="has-text-justified">
+            <li><strong>curl</strong> : Récupère les données dans le code HTML d'une URL donnée
+                <ul>
+                    <li>-i : Inclut les entêtes</li>
+                    <li>-L : Permet les redirections si l'URL n'est plus d'actuaité</li>
+                </ul>
+            </li>
+            <li><strong>grep</strong> : Sélectionne un patron spécifique pour ne récupérer que ce qui nous intéresse
+                <ul>
+                    <li>-P : Interprète les patrons en tant qu'expressions régulières compatibles avec Perl</li>
+                    <li>-o : Ne reconnait que le patron donné</li>
+                </ul>
+            </li>
+            <li><strong>lynx</strong> : Sert de navigateur web au sein du terminal
+                <ul>
+                    <li>-dump : Renvoie le texte brut de la page web</li>
+                    <li>-nolist : Supprime la liste d'URLs qui apparait par défaut à la fin de la page</li>
+                </ul>
+            </li>
+            <li><strong>tr</strong> : Permet de traduire ou supprimer un caractère
+                <ul>
+                    <li>-d : Permet de définir les caractéres à supprimer</li>
+                </ul>
+            </li>
+            <li><strong>cut</strong> : Retire une section dans une ligne de texte
+                <ul>
+                    <li>-d : Permet de définir un séparateur, celui par défaut étant une tabulation</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="content has-text-centered">
+    <p> Cliquez <a href="./miniprojet/Tableaux/tableau-fr.html">ici</a> pour voir les résultats obtenus</link>
+</div>
+</body>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p><strong>Mini-Projet </strong>par <a href="https://github.com/Nory09">Noraylanne Breussin</a></p>
+    </div>
+</html>
